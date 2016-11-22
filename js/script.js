@@ -1,4 +1,5 @@
 var tf = true;
+var td = true;
 var city = document.getElementById("city");
 var city_nav = document.getElementById("nav_city");
 var personal = document.getElementById("personal");
@@ -14,11 +15,11 @@ city.onclick = function(){
 	}
 }
 personal.onclick = function(){
-		if(tf){
+		if(td){
 		nav_personal.style.display = "none";
-		tf = false;
+		td = false;
 	}else{
 		nav_personal.style.display = "block";
-		tf = true;
+		td = true;
 	}
 }
