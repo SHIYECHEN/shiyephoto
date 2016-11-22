@@ -1,0 +1,72 @@
+*{
+	font-family: 'Cambay', arial;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+#container{
+	width: 100%;
+	/*background-color: red;*/
+	position: absolute;
+}
+#logo{
+	width: 20%;
+	height: 100px;
+	float: left;
+	/*background-color: blue;*/
+	position: fixed;
+	z-index: 999;
+}
+#logo a{
+	font-weight:normal;
+	display: block;
+	margin-top: 30px;
+	margin-left: 35px;
+	font-family: 'Montserrat',sans-serif;
+	font-size: 18px;
+	letter-spacing:1px;
+}
+#content{
+	width: 80%;
+	height:858px;
+	/*background-color: green;*/
+	margin-top: 103px;
+	float: right;
+}
+#content img{
+	width: 700px;
+	height: 466.2px;
+	margin-bottom: 103px;
+}
+#nav{
+	position: fixed;
+	z-index: 999;
+	width: 20%;
+	/*background-color: yellow;*/
+	top: 100px;
+	font-size: 12px;
+}
+#nav_all{
+	margin-left: 35px;
+	line-height: 21.6px;
+	list-style: none;
+}
+#city{
+	font-weight:bold;
+}
+#personal{
+	font-weight:bold;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+#nav_city a:hover{
+	color: white;
+}
+#nav_personal a:hover{
+	color: white;
+}
+#about a:hover {
+	text-decoration: underline;
+}
