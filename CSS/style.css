@@ -70,3 +70,6 @@ a{
 #about a:hover {
 	text-decoration: underline;
 }
+a.active {
+    background-color: #cddc39;
+}
