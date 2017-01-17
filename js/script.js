@@ -25,7 +25,7 @@ function removeActive(els, klass) {
 function creatP(el) {
     var div = document.createElement("div");
     var p = document.createElement("p");
-    p.innerHTML = "这是一个记忆盒子，这里存放一些不经意的瞬间，<br/>希望在多年以后，朋友们在这里看到某一张照片之后能够重新找回丢失记忆；<br /><br />这里的大部分照片由我拍摄，<br />另外一些是由朋友拍摄，我会增加一个列表存放他们的照片;<br />";
+    p.innerHTML = "一个记忆盒子，存放着一些不经意的瞬间，<br/>希望在多年之后，你能从这里找回那些逝去的风景；<br /><br />";
     div.appendChild(p);
     var p1 = document.createElement("p");
     p1.innerHTML = "<br />ShikChan<br /> Mail：chikchann(at)gmail.com<br /><br />HeYan<br/>WeChat：78946855";
@@ -39,6 +39,16 @@ function render(el) {
         shanghai: [{
             title: '上海淮海路',
             url: 'http://odj13j5fo.bkt.clouddn.com/%E4%B8%8A%E6%B5%B7%E6%B7%AE%E6%B5%B7%E8%B7%AF.jpg'
+        },
+        {
+            title: '上海淮海路',
+            url: 'http://odj13j5fo.bkt.clouddn.com/%E4%B8%8A%E6%B5%B7%E6%B7%AE%E6%B5%B7%E8%B7%AF.jpg'
+        },{
+            title: '上海淮海路',
+            url: 'http://odj13j5fo.bkt.clouddn.com/%E4%B8%8A%E6%B5%B7%E6%B7%AE%E6%B5%B7%E8%B7%AF.jpg'
+        },{
+            title: '上海淮海路',
+            url: 'http://odj13j5fo.bkt.clouddn.com/%E4%B8%8A%E6%B5%B7%E6%B7%AE%E6%B5%B7%E8%B7%AF.jpg'
         }],
         beijing: [{
             title: '华丰胡同',
@@ -47,6 +57,10 @@ function render(el) {
         suzhou: [{
             title: '苏州',
             url: 'http://odj13j5fo.bkt.clouddn.com/%E8%8B%8F%E5%B7%9E.jpg'
+        },
+        {
+            title: '苏州',
+            url: 'DSCF0536.JPG'
         }],
         tianjin: [{
             title: '武清站',
@@ -60,7 +74,7 @@ function render(el) {
             title: '老王',
             url: 'http://odj13j5fo.bkt.clouddn.com/%E8%80%81%E7%8E%8B.jpg'
         }],
-        heyanGallery: [{
+        heyangallery: [{
             title: '故宫',
             url: 'WechatIMG96.jpeg'
         }]
@@ -87,14 +101,14 @@ function toggleDisplay() {
         var navId = tagA[i].getAttribute("id");
         if (navId == "city" || navId == "personal") {
             var nav = document.getElementById(navId);
-            if (nav.innerHTML == "city") {
+            if (nav.innerHTML == "City") {
                 nav.onclick = function() {
                     var nav_city = document.getElementById("nav_city");
                     var displayProperty = window.getComputedStyle(nav_city, null).getPropertyValue('display');
                     displayProperty === 'block' ? nav_city.style.display = 'none' : nav_city.style.display = 'block';
                 }
             }
-            if (nav.innerHTML == "personal") {
+            if (nav.innerHTML == "Personal") {
                 nav.onclick = function() {
                     var nav_personal = document.getElementById("nav_personal");
                     var displayProperty = window.getComputedStyle(nav_personal, null).getPropertyValue('display');

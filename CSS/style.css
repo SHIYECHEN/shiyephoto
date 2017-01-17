@@ -1,84 +1,110 @@
-*{
-	font-family: 'Cambay', arial;
-	margin: 0px;
-	padding: 0px;
-	list-style: none;
+* {
+    font-family: 'Cambay', arial;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
 }
-#container{
-	width: 100%;
-	/*background-color: red;*/
-	position: absolute;
+
+body {
+    /*position: relative;*/
+    background-color: #f7f9f6;
 }
-#logo{
-	width: 20%;
+
+#container {
+    margin-left: 252px;
+    padding-top: 24px;
+    padding-right: 45px;
+    min-width: 275px;
+}
+
+#content {
+    text-align: center;
+    /*position: relative;*/
+}
+
+#content img {
+    margin-bottom: 30px;
+    width: 85%;
+    height: auto;
+}
+
+#content p {
+    font-family: 'Cambay', arial;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+#contact {
+    font-style: italic;
+}
+
+#nav {
+    background: #ffffff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0;
+    padding: 135px 35px 100px 55px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    color: #000;
+    font-size: 18px;
+    line-height: 1;
+    text-rendering: optimizeLegibility;
+    text-align: left;
+    width: 170px;
+    z-index: 999;
+}
+
+#nav_all {
+    font-size: 14px;
+    line-height: 2.6em;
+}
+
+#city {
+    font-weight: bold;
+}
+
+#personal {
+    font-weight: bold;
+}
+
+a.active {
+    color: black;
+}
+
+a {
+    color: #aea8a8;
+    text-decoration: none;
+}
+
+#nav_city a:hover {
+    color: black;
+}
+
+#nav_personal a:hover {
+    color: black;
+}
+
+#about a:hover, {
+    text-decoration: underline;
+}
+
+#logo {
+    /*width: 20%;
 	height: 100px;
 	float: left;
-	/*background-color: blue;*/
+	background-color: blue;
 	position: fixed;
-	z-index: 999;
+	z-index: 999;*/
 }
-#logo a{
-	font-weight:normal;
+
+#logo a {
+    /*font-weight:normal;
 	display: block;
 	margin-top: 30px;
 	margin-left: 35px;
 	font-family: 'Montserrat',sans-serif;
 	font-size: 18px;
-	letter-spacing:1px;
-}
-#content{
-	width: 80%;
-	/*height:858px;*/
-	margin-right: 90px;
-	/*background-color: green;*/
-	margin-top: 103px;
-	float: right;
-}
-#content img{
-	width: 90%;
-	height: auto;
-	margin-bottom: 103px;
-}
-#content p{
-	font-family: 'Cambay', arial;
-	font-size: 12px;
-	line-height: 20px;
-}
-#contact{
-	font-style:italic;
-}
-#nav{
-	position: fixed;
-	z-index: 999;
-	width: 20%;
-	/*background-color: yellow;*/
-	top: 100px;
-	font-size: 12px;
-}
-#nav_all{
-	margin-left: 35px;
-	line-height: 21.6px;
-	list-style: none;
-}
-#city{
-	font-weight:bold;
-}
-#personal{
-	font-weight:bold;
-}
-a.active {
-    background-color: rgb(219,255,204);
-}
-a{
-	text-decoration: none;
-	color: black;
-}
-#nav_city a:hover{
-	color: white;
-}
-#nav_personal a:hover{
-	color: white;
-}
-#about a:hover {
-	text-decoration: underline;
+	letter-spacing:1px;*/
 }
