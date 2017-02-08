@@ -167,3 +167,22 @@
 	z-index:26;
 	display:none;
 }
+body {
+    background: black;
+}
+
+
+
+#media {
+    position: relative;
+    left: -200px;
+    bottom: 1000px;
+}
+
+.element {
+    position: relative;
+    left: 40%;
+    color: white;
+    font-size: x-large;
+    display: inline;
+}
