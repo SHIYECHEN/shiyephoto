@@ -1,49 +1,116 @@
 
-<!DOCTYPE html>
-<html>
 
+
+
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>SHIYE</title>
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <link rel="stylesheet" type="text/css" href="http://fonts.css.network/css?family=Tangerine">
-    <link href="https://fonts.css.network/css?family=Montserrat" rel="stylesheet">
-    <link href="bitbug_favicon.ico" rel="shortcut icon">
-    <script type="text/javascript" src = "js/addLoadEvent.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+
+    <title>Our Story</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        @font-face {
+            font-family: digit;
+            src: url('digital-7_mono.ttf') format("truetype");
+        }
+    </style>
+    <link href="css/default.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/garden_dev.js"></script>
+    <script type="text/javascript" src="js/functions_dev.js"></script>
 </head>
-<body  class="">
-<embed height="100" width="100" src="陈升 - 把悲伤留给自己.mp3"></embed>
-    <div id="container">
+
+<body>
+    <div id="mainDiv">
         <div id="content">
-            <img src="http://odj13j5fo.bkt.clouddn.com/%E4%B8%8A%E6%B5%B7%E6%B7%AE%E6%B5%B7%E8%B7%AF.jpg">
+            <div id="code">
+
+                <span class="space"/><span class="comments"> We live in different cities,</span><br />
+                <br />
+                <span class="space"/><span class="comments"> So I write some code to celebrate our 1st Valentine's Day.</span><br />
+                <br />
+                <span class="comments">Dec 10, 2016, I told you I love you. </span><br />
+                <br />
+                <span class="comments">Luckily, you accepted and became my girlfriend ever since.</span><br />
+                <br />
+                <span class="comments">Since then, I miss you every day.</span><br />
+                <br />
+                <span class="comments">I will cherish you, my present and future.</span><br />
+                <br />
+                <span class="comments">You say that you won't be so easy to marry me.</span><br />
+                <br />
+                <span class="comments">So I keep waiting and I have confidence that you will.</span><br />
+                <br />
+                <span class="placeholder"/><span class="comments">The first Valentine's day,</span><br />
+                <br />
+                <span class="placeholder"/><span class="comments">Although we are not together,</span><br />
+                <br />
+                <span class="comments"> But my heart always thinking of you.</span><br />
+
+            </div>
+            <div id="loveHeart">
+                <canvas id="garden"></canvas>
+                <div id="words">
+                    <div id="messages">
+                        小呼噜,I have fallen in love with you for
+                        <div id="elapseClock"></div>
+                    </div>
+                    <div id="loveu">
+                        Love u forever and ever.<br/>
+                        <div class="signature">- 口水大王</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="copyright">
+            I love you,Marry me?<br />
+            <a href="yes.html">Yse</a>  <a href="no.html">No</a>
         </div>
     </div>
-    <div id="nav">
-        <ul id="nav_all">
-            <li>
-                <a href="javascript:;" id="city">City</a>
-                <ul id="nav_city">
-                    <li><a href="javascript:;" data-target="shanghai" class="link active">Shanghai</a></li>
-                    <li><a href="javascript:;" data-target="beijing" class="link">Beijing</a></li>
-                    <li><a href="javascript:;" data-target="suzhou" class="link">Suzhou</a></li>
-                    <li><a href="javascript:;" data-target="tianjin" class="link">Tianjin</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="javascript:;" id="personal">Personal</a>
-                <ul id="nav_personal">
-                    <li><a href="javascript:;" data-target="people" class="link">People</a></li>
-                    <li><a href="javascript:;" data-target="life" class="link">Life</a></li>
-                    <li><a href="javascript:;" data-target="heyangallery" class ="link" >HeyanGallery</a></li>
-                </ul>
-            </li>
-            <br />
-            <ul id="about">
-                <li>
-                    <a href="javascript:;" data-target="about" class="link">About</a>
-                </li>
-            </ul>
-        </ul>
-    </body>
+    <script type="text/javascript">
+        var offsetX = $("#loveHeart").width() / 2;
+        var offsetY = $("#loveHeart").height() / 2 - 55;
+        var displayMode = 1;
+        var together = new Date();
+        together.setFullYear(2016, 10, 3);
+        together.setHours(0);
+        together.setMinutes(0);
+        together.setSeconds(0);
+        together.setMilliseconds(0);
+
+        $("#loveHeart").click(function(){
+            displayMode *= -1;
+            timeElapse(together, displayMode);
+        });
+
+        if (!document.createElement('canvas').getContext) {
+            var msg = document.createElement("div");
+            msg.id = "errorMsg";
+            msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+            document.body.appendChild(msg);
+            $("#code").css("display", "none")
+            $("#copyright").css("position", "absolute");
+            $("#copyright").css("bottom", "10px");
+            document.execCommand("stop");
+        } else {
+            setTimeout(function () {
+                adjustWordsPosition();
+                startHeartAnimation();
+            }, 5000);
+
+            timeElapse(together, displayMode);
+            setInterval(function () {
+                timeElapse(together, displayMode);
+            }, 500);
+
+            adjustCodePosition();
+            $("#code").typewriter();
+        }
+    </script>
+    <div id="media" style="display:none">
+        <audio controls autoplay>
+        <source src="http://ol0ghh5sy.bkt.clouddn.com/youaremysunshine.mp3" type="audio/mpeg">
+    </audio>
+</div>
+</body>
 </html>

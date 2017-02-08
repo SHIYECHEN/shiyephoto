@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>yes</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.timers-1.2.js"></script>
+    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="js/jquery.galleryview-3.0-dev.js"></script>
+    <script type="text/javascript" src="js/typed.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/jquery.galleryview-3.0-dev.css" />
+    <link type="text/css" rel="stylesheet" href="css/yes.css" />
+</head>
+
+<body>
+    <!-- 浠ｇ爜 寮€濮� -->
+    <div id="msg_slideshow" class="msg_slideshow" style="margin:0 auto">
+        <div id="msg_wrapper" class="msg_wrapper" style="">
+        </div>
+        <div id="msg_controls" class="msg_controls">
+            <!-- right has to animate to 15px, default -110px -->
+            <a href="#" id="msg_grid" class="msg_grid"></a>
+            <a href="#" id="msg_prev" class="msg_prev"></a>
+            <a href="#" id="msg_pause_play" class="msg_pause"></a>
+            <!-- has to change to msg_play if paused-->
+            <a href="#" id="msg_next" class="msg_next"></a>
+        </div>
+        <div id="msg_thumbs" class="msg_thumbs">
+            <!-- top has to animate to 0px, default -230px -->
+            <div class="msg_thumb_wrapper">
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/001.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/001.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/002.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/002.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/003.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/003.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/004.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/004.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/005.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/005.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/006.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/006.jpg" /></a>
+            </div>
+            <div class="msg_thumb_wrapper" style="display:none;">
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/007.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/007.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/008.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/008.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/009.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/009.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/010.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/010.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/011.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/011.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/012.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/012.jpg" /></a>
+            </div>
+            <div class="msg_thumb_wrapper" style="display:none;">
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/013.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/013.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/014.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/014.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/015.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/015.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/016.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/016.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/017.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/017.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/018.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/018.jpg" /></a>
+            </div>
+            <div class="msg_thumb_wrapper" style="display:none;">
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/019.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/019.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/020.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/020.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/021.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/021.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/022.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/022.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/023.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/023.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/024.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/024.jpg" /></a>
+            </div>
+            <div class="msg_thumb_wrapper" style="display:none;">
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/025.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/025.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/026.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/026.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/027.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/027.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/028.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/028.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/029.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/029.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/030.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/030.jpg" /></a>
+            </div>
+            <div class="msg_thumb_wrapper" style="display:none;">
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/031.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/031.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/032.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/032.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/033.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/033.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/034.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/034.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/035.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/035.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/036.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/036.jpg" /></a>
+            </div>
+            <div class="msg_thumb_wrapper" style="display:none;">
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/037.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/037.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/038.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/038.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/039.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/039.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/040.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/040.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/041.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/041.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/042.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/042.jpg" /></a>
+            </div>
+            <div class="msg_thumb_wrapper" style="display:none;">
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/043.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/043.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/044.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/044.jpg" /></a>
+                <a href="#"><img src="http://ol0ghh5sy.bkt.clouddn.com/045.jpg" alt="http://ol0ghh5sy.bkt.clouddn.com/045.jpg" /></a>
+            </div>
+            <a href="#" id="msg_thumb_next" class="msg_thumb_next"></a>
+            <a href="#" id="msg_thumb_prev" class="msg_thumb_prev"></a>
+            <a href="#" id="msg_thumb_close" class="msg_thumb_close"></a>
+            <span class="msg_loading"></span>
+            <!-- show when next thumb wrapper loading -->
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(function() {
+            /**
+             * interval : time between the display of images
+             * playtime : the timeout for the setInterval function
+             * current  : number to control the current image
+             * current_thumb : the index of the current thumbs wrapper
+             * nmb_thumb_wrappers : total number of thumbs wrappers
+             * nmb_images_wrapper : the number of images inside of each wrapper
+             */
+            var interval = 4000;
+            var playtime;
+            var current = 0;
+            var current_thumb = 0;
+            var nmb_thumb_wrappers = $('#msg_thumbs .msg_thumb_wrapper').length;
+            var nmb_images_wrapper = 6;
+            /**
+             * start the slideshow
+             */
+            play();
+
+            /**
+             * show the controls when
+             * mouseover the main container
+             */
+            slideshowMouseEvent();
+
+            function slideshowMouseEvent() {
+                $('#msg_slideshow').unbind('mouseenter')
+                    .bind('mouseenter', showControls)
+                    .andSelf()
+                    .unbind('mouseleave')
+                    .bind('mouseleave', hideControls);
+            }
+
+            /**
+             * clicking the grid icon,
+             * shows the thumbs view, pauses the slideshow, and hides the controls
+             */
+            $('#msg_grid').bind('click', function(e) {
+                hideControls();
+                $('#msg_slideshow').unbind('mouseenter').unbind('mouseleave');
+                pause();
+                $('#msg_thumbs').stop().animate({
+                    'top': '0px'
+                }, 500);
+                e.preventDefault();
+            });
+
+            /**
+             * closing the thumbs view,
+             * shows the controls
+             */
+            $('#msg_thumb_close').bind('click', function(e) {
+                showControls();
+                slideshowMouseEvent();
+                $('#msg_thumbs').stop().animate({
+                    'top': '-230px'
+                }, 500);
+                e.preventDefault();
+            });
+
+            /**
+             * pause or play icons
+             */
+            $('#msg_pause_play').bind('click', function(e) {
+                var $this = $(this);
+                if ($this.hasClass('msg_play'))
+                    play();
+                else
+                    pause();
+                e.preventDefault();
+            });
+
+            /**
+             * click controls next or prev,
+             * pauses the slideshow,
+             * and displays the next or prevoius image
+             */
+            $('#msg_next').bind('click', function(e) {
+                pause();
+                next();
+                e.preventDefault();
+            });
+            $('#msg_prev').bind('click', function(e) {
+                pause();
+                prev();
+                e.preventDefault();
+            });
+
+            /**
+             * show and hide controls functions
+             */
+            function showControls() {
+                $('#msg_controls').stop().animate({
+                    'right': '15px'
+                }, 500);
+            }
+
+            function hideControls() {
+                $('#msg_controls').stop().animate({
+                    'right': '-110px'
+                }, 500);
+            }
+
+            /**
+             * start the slideshow
+             */
+            function play() {
+                next();
+                $('#msg_pause_play').addClass('msg_pause').removeClass('msg_play');
+                playtime = setInterval(next, interval)
+            }
+
+            /**
+             * stops the slideshow
+             */
+            function pause() {
+                $('#msg_pause_play').addClass('msg_play').removeClass('msg_pause');
+                clearTimeout(playtime);
+            }
+
+            /**
+             * show the next image
+             */
+            function next() {
+                ++current;
+                showImage('r');
+            }
+
+            /**
+             * shows the previous image
+             */
+            function prev() {
+                --current;
+                showImage('l');
+            }
+
+            /**
+             * shows an image
+             * dir : right or left
+             */
+            function showImage(dir) {
+                /**
+                 * the thumbs wrapper being shown, is always
+                 * the one containing the current image
+                 */
+                alternateThumbs();
+
+                /**
+                 * the thumb that will be displayed in full mode
+                 */
+                var $thumb = $('#msg_thumbs .msg_thumb_wrapper:nth-child(' + current_thumb + ')')
+                    .find('a:nth-child(' + parseInt(current - nmb_images_wrapper * (current_thumb - 1)) + ')')
+                    .find('img');
+                if ($thumb.length) {
+                    var source = $thumb.attr('alt');
+                    var $currentImage = $('#msg_wrapper').find('img');
+                    if ($currentImage.length) {
+                        $currentImage.fadeOut(function() {
+                            $(this).remove();
+                            $('<img />').load(function() {
+                                var $image = $(this);
+                                resize($image);
+                                $image.hide();
+                                $('#msg_wrapper').empty().append($image.fadeIn());
+                            }).attr('src', source);
+                        });
+                    } else {
+                        $('<img />').load(function() {
+                            var $image = $(this);
+                            resize($image);
+                            $image.hide();
+                            $('#msg_wrapper').empty().append($image.fadeIn());
+                        }).attr('src', source);
+                    }
+
+                } else { //this is actually not necessary since we have a circular slideshow
+                    if (dir == 'r')
+                        --current;
+                    else if (dir == 'l')
+                        ++current;
+                    alternateThumbs();
+                    return;
+                }
+            }
+
+            /**
+             * the thumbs wrapper being shown, is always
+             * the one containing the current image
+             */
+            function alternateThumbs() {
+                $('#msg_thumbs').find('.msg_thumb_wrapper:nth-child(' + current_thumb + ')')
+                    .hide();
+                current_thumb = Math.ceil(current / nmb_images_wrapper);
+                /**
+                 * if we reach the end, start from the beggining
+                 */
+                if (current_thumb > nmb_thumb_wrappers) {
+                    current_thumb = 1;
+                    current = 1;
+                }
+                /**
+                 * if we are at the beggining, go to the end
+                 */
+                else if (current_thumb == 0) {
+                    current_thumb = nmb_thumb_wrappers;
+                    current = current_thumb * nmb_images_wrapper;
+                }
+
+                $('#msg_thumbs').find('.msg_thumb_wrapper:nth-child(' + current_thumb + ')')
+                    .show();
+            }
+
+            /**
+             * click next or previous on the thumbs wrapper
+             */
+            $('#msg_thumb_next').bind('click', function(e) {
+                next_thumb();
+                e.preventDefault();
+            });
+            $('#msg_thumb_prev').bind('click', function(e) {
+                prev_thumb();
+                e.preventDefault();
+            });
+
+            function next_thumb() {
+                var $next_wrapper = $('#msg_thumbs').find('.msg_thumb_wrapper:nth-child(' + parseInt(current_thumb + 1) + ')');
+                if ($next_wrapper.length) {
+                    $('#msg_thumbs').find('.msg_thumb_wrapper:nth-child(' + current_thumb + ')')
+                        .fadeOut(function() {
+                            ++current_thumb;
+                            $next_wrapper.fadeIn();
+                        });
+                }
+            }
+
+            function prev_thumb() {
+                var $prev_wrapper = $('#msg_thumbs').find('.msg_thumb_wrapper:nth-child(' + parseInt(current_thumb - 1) + ')');
+                if ($prev_wrapper.length) {
+                    $('#msg_thumbs').find('.msg_thumb_wrapper:nth-child(' + current_thumb + ')')
+                        .fadeOut(function() {
+                            --current_thumb;
+                            $prev_wrapper.fadeIn();
+                        });
+                }
+            }
+
+            /**
+             * clicking on a thumb, displays the image (alt attribute of the thumb)
+             */
+            $('#msg_thumbs .msg_thumb_wrapper > a').bind('click', function(e) {
+                var $this = $(this);
+                $('#msg_thumb_close').trigger('click');
+                var idx = $this.index();
+                var p_idx = $this.parent().index();
+                current = parseInt(p_idx * nmb_images_wrapper + idx + 1);
+                showImage();
+                e.preventDefault();
+            }).bind('mouseenter', function() {
+                var $this = $(this);
+                $this.stop().animate({
+                    'opacity': 1
+                });
+            }).bind('mouseleave', function() {
+                var $this = $(this);
+                $this.stop().animate({
+                    'opacity': 0.5
+                });
+            });
+
+            /**
+             * resize the image to fit in the container (400 x 400)
+             */
+            function resize($image) {
+                var theImage = new Image();
+                theImage.src = $image.attr("src");
+                var imgwidth = theImage.width;
+                var imgheight = theImage.height;
+
+                var containerwidth = 600;
+                var containerheight = 600;
+
+                if (imgwidth > containerwidth) {
+                    var newwidth = containerwidth;
+                    var ratio = imgwidth / containerwidth;
+                    var newheight = imgheight / ratio;
+                    if (newheight > containerheight) {
+                        var newnewheight = containerheight;
+                        var newratio = newheight / containerheight;
+                        var newnewwidth = newwidth / newratio;
+                        theImage.width = newnewwidth;
+                        theImage.height = newnewheight;
+                    } else {
+                        theImage.width = newwidth;
+                        theImage.height = newheight;
+                    }
+                } else if (imgheight > containerheight) {
+                    var newheight = containerheight;
+                    var ratio = imgheight / containerheight;
+                    var newwidth = imgwidth / ratio;
+                    if (newwidth > containerwidth) {
+                        var newnewwidth = containerwidth;
+                        var newratio = newwidth / containerwidth;
+                        var newnewheight = newheight / newratio;
+                        theImage.height = newnewheight;
+                        theImage.width = newnewwidth;
+                    } else {
+                        theImage.width = newwidth;
+                        theImage.height = newheight;
+                    }
+                }
+                $image.css({
+                    'width': theImage.width,
+                    'height': theImage.height
+                });
+            }
+        });
+    </script>
+    <div id="media">
+        <audio controls autoplay>
+            <source src="http://ol0ghh5sy.bkt.clouddn.com/lucky.mp3" type="audio/mpeg">
+            </audio>
+    </div>
+    <div id="conent">
+        <div class="element"></div>
+    </div>
+    <script type="text/javascript">
+        $(function() {
+            $(".element").typed({
+                strings: ["我们虽然见过爱情那么多种模样，但见过再多也不如亲历一次来得深刻。", "无论爱来得多艰难多迟缓，一生至少全力以赴地爱一次。我爱你。"],
+                typeSpeed: 150
+            });
+        });
+    </script>
+</body>
+
+</html>
