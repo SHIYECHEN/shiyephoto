@@ -1,0 +1,57 @@
+    body{
+/*        background-color: black;
+*/    }
+    .a {
+        background-color: #f7f9f6;
+        padding: 0;
+    }
+    
+    strong {
+        color:black;
+        display: block;
+        letter-spacing: 2px;
+        text-indent: 12%;
+        font-size: 13px;
+        line-height: 2em;
+        padding-bottom: 9px;
+        padding-top: 4px;
+    }
+    
+    .navall {
+        /*background-color: black;*/
+        padding-top: 270px;
+        text-indent: 5%;
+        letter-spacing: 1.5px;
+        position: fixed;
+        width: 16.68%;
+        /*overflow-x: hidden;*/
+        overflow-y: auto;
+        line-height: 0.5em;
+        bottom: 0;
+        top: 0px;
+        left: 0px;
+
+    }
+    
+    .navall a {
+        color: #aea8a8;
+        font-size: 12px
+    }
+    
+    .contai img {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 88%;
+    }
+    
+    .contai {
+        height: 100%;
+    }
+    /**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2017-02-09 17:18:46
+ * @version $Id$
+ */
