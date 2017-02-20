@@ -1,13 +1,30 @@
+// var click = document.getElementById("click");
+// var getUl = document.getElementById("displayBar");
+// click.onclick = function(){
+//     // getUl.classList.remove("none");
+//    // getUl.classList.add("block");
+// }
+
+
+
+
+
+
 function changeLi() {
     var getLi = document.getElementsByTagName("li");
+    var getUl = document.getElementById("navbar-collapse");
+
     for (var i = 0; i < getLi.length; i++) {
-        getLi[i].onclick = function () {
-            removeClass(getLi, "active")
+        getLi[i].onclick = function() {
+            removeClass(getLi, "active");
+            getUl.classList.remove("in");
             this.setAttribute("class", "active");
             render(this.querySelector('a'));
+
         }
     }
 }
+
 function removeClass(els, kliss) {
     for (var i = 0; i < els.length; i++) {
         els[i].classList.remove(kliss);
@@ -19,26 +36,26 @@ function render(el) {
         shanghai: [{
             title: '上海淮海路',
             url: 'http://odj13j5fo.bkt.clouddn.com/%E4%B8%8A%E6%B5%B7%E6%B7%AE%E6%B5%B7%E8%B7%AF.jpg'
-        },],
+        }, ],
         beijing: [{
             title: '华丰胡同',
             url: 'http://odj13j5fo.bkt.clouddn.com/%E5%8D%8E%E4%B8%B0%E8%83%A1%E5%90%8C.jpg'
-        },{
+        }, {
             title: '上海淮海路',
             url: 'http://odj13j5fo.bkt.clouddn.com/%E4%B8%8A%E6%B5%B7%E6%B7%AE%E6%B5%B7%E8%B7%AF.jpg'
-        },{
+        }, {
             title: '上海淮海路',
             url: 'http://odj13j5fo.bkt.clouddn.com/%E4%B8%8A%E6%B5%B7%E6%B7%AE%E6%B5%B7%E8%B7%AF.jpg'
-        },{
+        }, {
             title: '上海淮海路',
             url: 'http://odj13j5fo.bkt.clouddn.com/%E4%B8%8A%E6%B5%B7%E6%B7%AE%E6%B5%B7%E8%B7%AF.jpg'
-        },{
+        }, {
             title: '上海淮海路',
             url: 'http://odj13j5fo.bkt.clouddn.com/%E4%B8%8A%E6%B5%B7%E6%B7%AE%E6%B5%B7%E8%B7%AF.jpg'
-        },{
+        }, {
             title: '上海淮海路',
             url: 'http://odj13j5fo.bkt.clouddn.com/%E4%B8%8A%E6%B5%B7%E6%B7%AE%E6%B5%B7%E8%B7%AF.jpg'
-        },],
+        }, ],
         suzhou: [{
             title: '苏州',
             url: 'DSCF0536.JPG'
@@ -76,5 +93,4 @@ function render(el) {
     }
     contenter.innerHTML = tpl;
 }
-
 window.onload = changeLi();
