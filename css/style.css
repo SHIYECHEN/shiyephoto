@@ -1,6 +1,6 @@
     body{
-/*        background-color: black;
-*/    }
+    /*background-color: #f7f9f6;*/
+    }
     .a {
         background-color: #f7f9f6;
         padding: 0;
@@ -18,7 +18,8 @@
     }
     
     .navall {
-        /*background-color: black;*/
+
+        /*background-color: white;*/
         padding-top: 270px;
         text-indent: 5%;
         letter-spacing: 1.5px;
@@ -56,7 +57,7 @@
     .logo a:hover{
         color: #0066ff;
     }
-    .contai {
+    .contai{
         height: 100%;
     }
     .headbar{
@@ -85,11 +86,27 @@
         z-index: 998;
         top: 0px;
     }
-.none{
-    display: none;
+.about a:hover{
+    color: blue;
 }
-.block{
-    display: block;
+.about a {
+    color: black;
+}
+.about img{
+    margin-bottom: 10px;
+    border:solid 14px white;
+    width: 50%;
+
+}
+.contai2{
+    height: 100%;
+}
+.about{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
     /**
  * 

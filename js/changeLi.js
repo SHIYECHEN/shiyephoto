@@ -1,13 +1,3 @@
-// var click = document.getElementById("click");
-// var getUl = document.getElementById("displayBar");
-// click.onclick = function(){
-//     // getUl.classList.remove("none");
-//    // getUl.classList.add("block");
-// }
-
-
-
-
 
 
 function changeLi() {
@@ -30,7 +20,10 @@ function removeClass(els, kliss) {
         els[i].classList.remove(kliss);
     }
 }
-
+function creatP(el) {
+    var p1 = document.createElement("p");
+    p1.innerHTML = "<div class='contai2 '><div class='about'><img src='me.jpeg'><p><a href='http://weibo.com/chens0529'>Weibo</a> <a href='https://www.instagram.com/ShikChann'>Instagram</a></p><p>WeChat: ShikChan</p><p>Mail：chikchann(at)gmail.com</p></div></div>";el.appendChild(p1);
+}
 function render(el) {
     var images = {
         shanghai: [{
@@ -81,7 +74,7 @@ function render(el) {
     //获得data_target属性的值
     var category = el.getAttribute('data-target');
     var tpl = '';
-    if (category == '') {
+    if (category == 'about') {
         contenter.innerHTML = '';
         creatP(contenter);
         return;
@@ -89,7 +82,7 @@ function render(el) {
     var categoryImages = images[category];
     console.log(categoryImages);
     for (var i = 0, l = categoryImages.length; i < l; i++) {
-        tpl += '<div class="contai" style = "height = 100%"><img src="' + categoryImages[i].url + '"></div>';
+        tpl += '<div class="contai"><img src="' + categoryImages[i].url + '"></div>';
     }
     contenter.innerHTML = tpl;
 }
