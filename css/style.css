@@ -43,7 +43,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 82%;
+        width: 90%;
     }
     .logo a{
 
@@ -95,7 +95,7 @@
 .about img{
     margin-bottom: 10px;
     border:solid 14px white;
-    width: 50%;
+    width: 55%;
 
 }
 .contai2{
